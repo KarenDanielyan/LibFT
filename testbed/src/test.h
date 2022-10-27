@@ -1,20 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   test.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 21:46:28 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 23:13:57 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/27 22:47:08 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/27 22:48:10 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "put.h"
+#ifndef TEST_H
+# define TEST_H
 
-void	ft_putendl_fd(char *str, int fd)
-{
-	while (*str)
-		write(fd, str++, 1);
-	write(fd, "\n", 1);
-}
+# include "put/test_put.h"
+#endif
