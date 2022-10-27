@@ -6,13 +6,13 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:19:31 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 20:31:23 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/27 20:37:26 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_put.h"
 
-void	helper(int n)
+static void	helper(int n)
 {
 	printf("ft_putstr(\"%d\"): ", n);
 	fflush(stdout);
