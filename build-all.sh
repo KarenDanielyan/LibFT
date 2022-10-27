@@ -5,7 +5,7 @@ set echo on
 echo "Building everything..."
 
 
-pushd lib
+pushd libft
 source build.sh
 popd
 

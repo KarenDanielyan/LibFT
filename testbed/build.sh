@@ -10,10 +10,10 @@ cFilenames=$(find . -type f -name "*.c")
 # echo "Files:" $cFilenames
 
 assembly="testbed"
-compilerFlags="-g -Wall -Wextra -Werror -Wpedantic" 
+compilerFlags="-g -fPIC -Wall -Wextra -Werror -Wpedantic" 
 # -Wall -Werror
-includeFlags="-Isrc -I../engine/src/"
-linkerFlags="-L../bin/ -llib -Wl,-rpath,."
+includeFlags="-Isrc -I../libft/src/"
+linkerFlags="-L../bin/ -l_libft -Wl,-rpath,."
 
 echo "Building $assembly..."
 echo gcc $cFilenames $compilerFlags -o ../bin/$assembly $includeFlags $linkerFlags

@@ -9,11 +9,11 @@ cFilenames=$(find . -type f -name "*.c")
 
 # echo "Files:" $cFilenames
 
-assembly="engine"
-compilerFlags="-g -shared -Wall -Wextra -Werror -Wpedantic"
+assembly="libft"
+compilerFlags="-g -shared -fPIC -Wall -Wextra -Werror -Wpedantic"
 # -fms-extensions 
 # -Wall -Werror
 includeFlags="-Isrc"
 
 echo "Building $assembly..."
-gcc $cFilenames $compilerFlags -o ../bin/lib$assembly.so $defines $includeFlags $linkerFlags 
+gcc $cFilenames $compilerFlags -o ../bin/lib_$assembly.so $defines $includeFlags $linkerFlags 

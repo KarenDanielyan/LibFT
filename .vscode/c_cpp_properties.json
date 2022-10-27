@@ -1,10 +1,11 @@
 {
   "configurations": [
     {
-      "name": "Linux",
+      "name": "linux-gcc-x64",
       "includePath": [
         "${workspaceFolder}/**",
-        "${workspaceFolder}/libft/src/**"
+        "${workspaceFolder}/libft/src/**",
+        "${workspaceFolder}/libft/src"
       ],
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "c99",

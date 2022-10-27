@@ -4,10 +4,10 @@
             "type": "shell",
             "label": "Build Library",
             "linux":{
-                "command": "${workspaceFolder}/lib/build.sh"
+                "command": "${workspaceFolder}/libft/build.sh"
             },
             "options": {
-                "cwd": "${workspaceFolder}/lib"
+                "cwd": "${workspaceFolder}/libft"
             },
             "problemMatcher": [
                 "$gcc"
