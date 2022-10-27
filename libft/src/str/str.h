@@ -1,32 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putnbr.c                                      :+:      :+:    :+:   */
+/*   str.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 20:19:31 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 21:14:21 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/27 20:43:17 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/27 20:45:02 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_put.h"
+#ifndef STR_H
+# define STR_H
 
-static void	helper(int n)
-{
-	printf("ft_putstr(\"%d\"): ", n);
-	fflush(stdout);
-	ft_putnbr(n);
-	printf("\n");
-}
-
-void	test_putnbr(void)
-{
-	printf("TESTING PUTNBR\n");
-	helper(0);
-	helper(INT_MAX);
-	helper(INT_MIN);
-	helper(2141248);
-	helper(-120023);
-	printf("\n");
-}
+int	ft_strlen(char *str);
+#endif

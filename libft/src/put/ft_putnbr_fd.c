@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putnbr.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 20:19:31 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 21:14:21 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/27 21:53:20 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/27 21:54:05 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_put.h"
+#include "put.h"
 
-static void	helper(int n)
+void	ft_putnbr_fd(int nbr, int fd)
 {
-	printf("ft_putstr(\"%d\"): ", n);
-	fflush(stdout);
-	ft_putnbr(n);
-	printf("\n");
-}
+	unsigned int	temp;
+	char			buf;
 
-void	test_putnbr(void)
-{
-	printf("TESTING PUTNBR\n");
-	helper(0);
-	helper(INT_MAX);
-	helper(INT_MIN);
-	helper(2141248);
-	helper(-120023);
-	printf("\n");
+	temp = nbr;
+	if (nbr < 0)
+	{
+		temp = (unsigned int)(-1 * nbr);
+		write(fd, "-", 1);
+	}
+	if (temp > 9)
+	{
+		ft_putnbr(temp / 10);
+		ft_putnbr(temp % 10);
+	}
+	else
+	{
+		buf = '0' + temp;
+		write(fd, &buf, 1);
+	}
 }

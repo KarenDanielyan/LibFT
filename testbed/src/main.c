@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 20:32:32 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/27 22:20:34 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 int main()
 {
-	printf("TESTING PUTSTR\n");
-    test_putstr();
-	printf("\n");
-	printf("TESTING PUTNBR\n");
-    test_putnbr();
+	//test_putstr();
+	//test_putnbr();
+	//test_putnbr_base();
+	test_putendl();
+	test_putendl_fd();
+	//test_putnbr_base_fd();
+	//test_putnbr_fd();
+	//test_putstr_fd();
     return (0);
 }

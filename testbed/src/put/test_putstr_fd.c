@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putnbr.c                                      :+:      :+:    :+:   */
+/*   test_putstr_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 20:19:31 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 21:14:21 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/27 22:09:36 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/27 22:16:42 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_put.h"
 
-static void	helper(int n)
+void	test_putstr_fd(void)
 {
-	printf("ft_putstr(\"%d\"): ", n);
+	printf("TESTING PUTSTR_FD\n");
 	fflush(stdout);
-	ft_putnbr(n);
-	printf("\n");
-}
-
-void	test_putnbr(void)
-{
-	printf("TESTING PUTNBR\n");
-	helper(0);
-	helper(INT_MAX);
-	helper(INT_MIN);
-	helper(2141248);
-	helper(-120023);
+	char *str = "Hello World\n";
+	ft_putstr_fd(str, STDOUT_FILENO);
 	printf("\n");
 }
