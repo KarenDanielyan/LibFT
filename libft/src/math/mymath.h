@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   mymath.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 22:48:14 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/27 22:54:28 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/27 23:14:18 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#ifndef MYMATH_H
+# define MYMATH_H
+# include "defines.h"
 
-int main()
-{
-
-    return (0);
-}
+int	ft_factorial(int nb);
+int	ft_pow(int nb, int pow);
+int	ft_fibonacci(int index);
+int	ft_sqrt(int nb);
+t_bool ft_is_prime(int nb);
+int	ft_next_prime(int nb);
+#endif
