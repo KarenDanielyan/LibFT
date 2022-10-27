@@ -12,7 +12,7 @@ cFilenames=$(find . -type f -name "*.c")
 assembly="testbed"
 compilerFlags="-g -fPIC -Wall -Wextra -Werror -Wpedantic" 
 # -Wall -Werror
-includeFlags="-Isrc -I../libft/src/"
+includeFlags="-Isrc -I../libft/src/ -I../libft/"
 linkerFlags="-L../bin/ -l_libft -Wl,-rpath,."
 
 echo "Building $assembly..."

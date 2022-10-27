@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:31:08 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 18:51:24 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/27 19:17:16 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef double				f64;
 # if defined(__clang__) || defined(__gcc__)
 # define STATIC_ASSERT _Static_assert
 # else
+# include <assert.h>
 # define STATIC_ASSERT static_assert
 # endif
 

@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 19:02:38 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/27 15:07:28 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/27 19:02:10 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <libft.h>
+#include "put.h"
 
-int main()
+void	ft_putchar(char c)
 {
-    char *str = "Hello World!!\n";
-    while (*str)
-    {
-        ft_putchar(*str);
-        str++;
-    }
-    return (0);
+	write(STDOUT_FILENO, &c, 1);
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 15:07:28 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 18:53:57 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/27 19:00:46 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/27 19:01:57 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-void	ft_putchar(char c)
-{
-	write(STDOUT_FILENO, &c, 1);
-}
+# include "defines.h"
+# include "put/put.h"
+#endif
