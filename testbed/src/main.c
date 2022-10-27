@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 19:02:38 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/27 19:24:11 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@
 int main()
 {
     char *str = "Hello World!!\n";
-    while (*str)
-    {
-        ft_putchar(*str);
-        str++;
-    }
+    ft_putstr(str);
     return (0);
 }
