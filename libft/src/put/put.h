@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:08:34 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 19:02:06 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/27 20:12:21 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
+void	ft_putnbr(int nbr);
 #endif

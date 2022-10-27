@@ -6,16 +6,18 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 19:24:11 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/27 20:32:32 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <libft.h>
+#include "put/test_put.h"
 
 int main()
 {
-    char *str = "Hello World!!\n";
-    ft_putstr(str);
+	printf("TESTING PUTSTR\n");
+    test_putstr();
+	printf("\n");
+	printf("TESTING PUTNBR\n");
+    test_putnbr();
     return (0);
 }

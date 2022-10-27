@@ -45,7 +45,8 @@
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [
     "${workspaceFolder}/libft/src/**",
-    "${workspaceFolder}/libft/src"
+    "${workspaceFolder}/libft/src",
+    "${workspaceFolder}/libft"
   ],
   "C_Cpp_Runner.includeSearch": [
     "*",

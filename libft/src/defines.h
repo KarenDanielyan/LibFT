@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:31:08 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 19:21:27 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/27 20:23:13 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,7 @@ typedef enum e_bool
 	FALSE,
 	TRUE
 }	t_bool;
+
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
 #endif
