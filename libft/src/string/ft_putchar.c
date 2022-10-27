@@ -6,13 +6,13 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:07:28 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 15:11:01 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/27 18:53:57 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(STDOUT_FILENO, &c, 1);
+	write(STDOUT_FILENO, &c, 1);
 }

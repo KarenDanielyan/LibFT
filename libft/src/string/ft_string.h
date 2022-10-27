@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:08:34 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 15:25:37 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/27 18:53:59 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 # define FT_STRING_H
 # include <unistd.h>
 
-void    ft_putchar(char c);
+void	ft_putchar(char c);
 #endif
