@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_fibonacci.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/28 21:26:48 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/28 13:16:46 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/28 20:55:51 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "test_math.h"
 
-int main()
+void	test_fibonacci(void)
 {
-	test_sqrt();
-	test_pow();
-	test_factorial();
-	test_fibonacci();
-	test_is_prime();
-	test_next_prime();
-	return (0);
+	printf("Index 3: %d\n", ft_fibonacci(3));
+    printf("Index 6: %d\n", ft_fibonacci(6));
+    printf("Index 8: %d\n", ft_fibonacci(8));
+    printf("Index -4: %d\n", ft_fibonacci(-4));
 }
