@@ -6,7 +6,17 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:14:41 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 23:14:43 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/28 21:31:48 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "mymath.h"
+
+int	ft_next_prime(int nb)
+{
+	if (nb < 2)
+		return (2);
+	while (!ft_is_prime(nb))
+		nb++;
+	return (nb);
+}

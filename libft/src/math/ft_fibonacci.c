@@ -6,9 +6,11 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:08:04 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 23:10:10 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/28 21:01:08 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "mymath.h"
 
 int	ft_fibonacci(int index)
 {

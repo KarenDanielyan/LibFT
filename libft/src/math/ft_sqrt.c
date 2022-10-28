@@ -6,15 +6,15 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:14:30 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/28 13:48:49 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/28 21:31:12 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int i;
-	int j;
-	long curr;
+	int		i;
+	int		j;
+	long	curr;
 
 	i = 0;
 	j = nb;
