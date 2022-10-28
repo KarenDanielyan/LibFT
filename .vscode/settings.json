@@ -62,6 +62,8 @@
   ],
   "files.associations": {
     "ft_string.h": "c",
-    "unistd.h": "c"
+    "unistd.h": "c",
+    "test_put.h": "c",
+    "test_math.h": "c"
   }
 }

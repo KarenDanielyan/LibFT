@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 22:47:08 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 22:48:10 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/28 12:31:28 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,5 @@
 # define TEST_H
 
 # include "put/test_put.h"
+# include "math/test_math.h"
 #endif
