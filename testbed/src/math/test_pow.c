@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pow.c                                           :+:      :+:    :+:   */
+/*   test_pow.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 23:14:35 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/28 14:09:29 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/28 13:17:50 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/28 14:13:05 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_pow(int nb, int pow)
+#include "test_math.h"
+
+void	test_pow(void)
 {
-	int	res;
-	
-	res = 1;
-	if (nb < 0)
-		return (0);
-	while (pow--)
-	{
-		res *= nb;
-	}
-	return (res);
+	printf("pow(5, 2): %d\n", ft_pow(5, 2));
+	printf("pow(32768, 2): %d\n", ft_pow(32768, 2));
+	printf("pow(-1, 4): %d\n", ft_pow(-1, 4));
+	printf("pow(11, 5): %d\n", ft_pow(11, 5));
+	printf("pow(3, 4): %d\n", ft_pow(3, 4));
 }
