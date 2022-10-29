@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/29 18:48:51 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/29 19:49:53 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main()
 {
-	//test_strlen();
-	//test_strcpy();
+	test_strlen();
+	test_strcpy();
 	test_strncpy();
 	test_strlcpy();
 	return (0);
