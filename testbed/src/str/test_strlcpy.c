@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 18:15:00 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/29 19:04:30 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/29 22:55:40 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	test_strlcpy(void)
 	initialize(str1, 100);
 	i = ft_strlcpy(str,
 			"If you see this text, then ft_strlcpy function works :)\n", 100);
-	printf("\nTesting ex10:\nOutput of ft_strlcpy: %s", str);
+	printf("\nTesting ft_strlcpy:\nOutput of ft_strlcpy: %s", str);
 	printf("Func returned %u bytes. \nChecking for null character: ", i);
 	if (str[56] == '\0' && str[57] != '\0')
 		printf("OK\n");

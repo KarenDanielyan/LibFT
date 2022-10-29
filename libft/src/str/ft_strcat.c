@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_str.h                                         :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 15:32:58 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/29 21:39:01 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/29 21:39:52 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/29 22:54:09 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_STR_H
-# define TEST_STR_H
-# include <stdio.h>
-# include <libft.h>
-# include <bsd/string.h>
+#include "str.h"
 
-void	test_strlen(void);
-void	test_strcpy(void);
-void	test_strncpy(void);
-void	test_strlcpy(void);
-void	test_strcat(void);
-void	test_strncat(void);
-void	test_strlcat(void);
-#endif
+t_string	ft_strcat(t_string dest, t_string src)
+{
+	int i;
+
+	i = ft_strlen(dest);
+	while (*src)
+	{
+		*(dest + i) = *src;
+		src++;
+		i++;
+	}
+	*(dest + i) = '\0';
+	return (dest);
+}
