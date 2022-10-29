@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_strcpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/29 18:48:51 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/29 16:36:36 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/29 17:31:44 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "test_str.h"
 
-int main()
+void	test_strcpy(void)
 {
-	//test_strlen();
-	//test_strcpy();
-	test_strncpy();
-	test_strlcpy();
-	return (0);
+	char	str[100];
+
+	strcpy(str, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+	ft_strcpy(str,
+		"If you see this text, then ft_strcpy function works properly.\n");
+	printf("Testing ft_strcpy:\n%s", str);
 }

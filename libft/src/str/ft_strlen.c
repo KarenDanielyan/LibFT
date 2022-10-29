@@ -6,13 +6,13 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:43:56 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 20:44:48 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/10/29 18:12:22 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "str.h"
 
-int	ft_strlen(char *str)
+i32	ft_strlen(t_string str)
 {
 	int	i;
 

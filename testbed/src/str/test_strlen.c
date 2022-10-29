@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_strlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/29 18:48:51 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/29 16:32:01 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/29 16:36:27 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "test_str.h"
 
-int main()
+static void	helper(t_string str)
 {
-	//test_strlen();
-	//test_strcpy();
-	test_strncpy();
-	test_strlcpy();
-	return (0);
+	printf("\"%s\" len: %d", str, ft_strlen(str));
+	printf("\n");
+}
+
+void	test_strlen(void)
+{
+	helper("");
+	helper("akskdkfjc435");
+	helper("123556df\0sdfkjsdkf");
 }

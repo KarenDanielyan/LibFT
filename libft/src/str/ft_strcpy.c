@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/29 18:48:51 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/29 16:17:42 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/10/29 16:59:48 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "str.h"
 
-int main()
+t_string	ft_strcpy(t_string dest, t_string src)
 {
-	//test_strlen();
-	//test_strcpy();
-	test_strncpy();
-	test_strlcpy();
-	return (0);
+	int	i;
+
+	i = 0;
+	while (*(src + i))
+	{
+		*(dest + i) = *(src + i);
+		i++;
+	}
+	*(dest + i) = '\0';
+	return (dest);
 }
