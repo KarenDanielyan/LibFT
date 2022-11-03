@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_str.h                                         :+:      :+:    :+:   */
+/*   ft_strnrcmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 15:32:58 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/11/04 00:59:48 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/11/04 01:15:51 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/11/04 01:17:33 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_STR_H
-# define TEST_STR_H
-# include <stdio.h>
-# include <libft.h>
-# include <bsd/string.h>
+#include "str.h"
 
-void	test_strlen(void);
-void	test_strcpy(void);
-void	test_strncpy(void);
-void	test_strlcpy(void);
-void	test_strcat(void);
-void	test_strncat(void);
-void	test_strlcat(void);
-void	test_strcmp(void);
-void	test_strncmp(void);
-void	test_strnrcmp(void);
-#endif
+i32	ft_strnrcmp(t_string s1, t_string s2, u32 size)
+{
+	(void)s1;
+	(void)s2;
+	(void)size;
+	return (0);
+}

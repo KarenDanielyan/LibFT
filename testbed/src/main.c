@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/29 23:54:33 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/11/04 01:18:45 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,10 @@
 
 int main()
 {
-	test_strlen();
+	test_strcmp();
 	printf("\n");
-	test_strcpy();
+	test_strncmp();
 	printf("\n");
-	test_strncpy();
-	printf("\n");
-	test_strlcpy();
-	printf("\n");
-	test_strcat();
-	printf("\n");
-	test_strncat();
-	printf("\n");
-	test_strlcat();
-	printf("\n");
+	test_strnrcmp();
 	return (0);
 }
