@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 01:15:51 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/11/04 01:17:33 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/11/05 00:36:35 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,14 @@
 
 i32	ft_strnrcmp(t_string s1, t_string s2, u32 size)
 {
-	(void)s1;
-	(void)s2;
-	(void)size;
-	return (0);
+	t_string rev1;
+	t_string rev2;
+	int	res;
+
+	rev1 = ft_strrev(s1);
+	rev2 = ft_strrev(s2);
+	res = ft_strncmp(rev1, rev2, size);
+	free(rev1);
+	free(rev2);
+	return (res);
 }

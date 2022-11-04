@@ -6,13 +6,14 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:43:17 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/11/04 01:24:25 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/11/05 00:06:30 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STR_H
 # define STR_H
 # include "defines.h"
+# include <stdlib.h>
 
 typedef char *	t_string;
 
@@ -27,4 +28,5 @@ u32				ft_strlcat(t_string dest, t_string src, u32 size);
 i32				ft_strcmp(t_string s1, t_string s2);
 i32				ft_strncmp(t_string s1, t_string s2, u32 size);
 i32				ft_strnrcmp(t_string s1, t_string s2, u32 size);
+t_string		ft_strdup(t_string src);
 #endif

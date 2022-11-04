@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/11/04 01:18:45 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/11/05 00:28:38 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int main()
 	test_strcmp();
 	printf("\n");
 	test_strncmp();
+	printf("\n");
 	printf("\n");
 	test_strnrcmp();
 	return (0);

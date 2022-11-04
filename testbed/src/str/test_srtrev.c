@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   test_srtrev.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 01:22:53 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/11/05 00:05:20 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/11/04 22:39:08 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/11/05 00:05:13 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "str.h"
+#define TEST_MESSAGE "Hello World!!!"
 
-t_string	ft_strrev(t_string str)
+#include "test_str.h"
+
+void	test_strrev(void)
 {
-	t_string dup = ft_strdup(str);
-	char	temp;
-	char	*l;
-	char	*r;
-	
-	l = dup;
-	r = dup + ft_strlen(dup) - 1;
-	while (l < r)
-	{
-		temp = *l;
-		*l = *r;
-		*r = temp;
-		l++ ;
-		r-- ;
-	}
-	return (dup);
+	printf("ft_putstr: ");
+	fflush(stdout);
+	ft_putstr(TEST_MESSAGE);
+	printf("\nft_strrev: ");
+	fflush(stdout);
+	ft_putstr(ft_strrev(TEST_MESSAGE));
 }

@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 15:32:58 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/11/04 00:59:48 by kdaniely         ###   ########.fr       */
+/*   Updated: 2022/11/05 00:02:59 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ void	test_strlcat(void);
 void	test_strcmp(void);
 void	test_strncmp(void);
 void	test_strnrcmp(void);
+void	test_strrev(void);
 #endif
