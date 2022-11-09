@@ -6,7 +6,8 @@
         "${workspaceFolder}/**",
         "${workspaceFolder}/libft/src/**",
         "${workspaceFolder}/libft/src",
-        "${workspaceFolder}/libft"
+        "${workspaceFolder}/libft",
+        "${workspaceFolder}/libft/**"
       ],
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "c99",

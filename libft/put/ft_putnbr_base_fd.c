@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 20:41:41 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/10/27 23:13:16 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/10/27 21:47:30 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/11/09 22:56:05 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static int	ft_check_base(char *base)
 	return (1);
 }
 
-void	ft_putnbr_base(int nb, char *base)
+void	ft_putnbr_base_fd(int nb, char *base, int fd)
 {
 	unsigned int	tmp;
 	int				base_len;
@@ -68,7 +68,7 @@ void	ft_putnbr_base(int nb, char *base)
 	base_len = ft_strlen(base);
 	if (nb < 0)
 	{
-		ft_putchar('-');
+		ft_putchar_fd('-', fd);
 		tmp = (unsigned int)(-1 * nb);
 	}
 	else
@@ -79,5 +79,5 @@ void	ft_putnbr_base(int nb, char *base)
 		ft_putnbr_base(tmp % base_len, base);
 	}
 	else
-		ft_putchar(base[tmp]);
+		ft_putchar_fd(base[tmp], fd);
 }

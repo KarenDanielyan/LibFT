@@ -13,7 +13,7 @@ assembly="libft"
 compilerFlags="-g -shared -fPIC -Wall -Wextra -Werror -Wpedantic"
 # -fms-extensions 
 # -Wall -Werror
-includeFlags="-Isrc"
+includeFlags="-I./"
 
 echo "Building $assembly..."
 gcc $cFilenames $compilerFlags -o ../bin/lib_$assembly.so $defines $includeFlags $linkerFlags 
