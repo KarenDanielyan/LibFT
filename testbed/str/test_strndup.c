@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_strndup.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2022/11/12 20:40:33 by kdaniely         ###   ########.fr       */
+/*   Created: 2022/11/12 20:37:12 by kdaniely          #+#    #+#             */
+/*   Updated: 2022/11/12 20:41:30 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "test_str.h"
 
-int main()
+static void	helper(void)
 {
-	test_strcmp();
-	printf("\n");
-	test_strncmp();
-	printf("\n");
-	printf("\n");
-	test_strnrcmp();
-	printf("\n");
-	test_strndup();
-	return (0);
+	char	*test = "If you see this text, then ft_strndup function works!\n";
+	char	*str;
+
+	str = ft_strndup(test, ft_strlen(test));
+	printf("Testing strdup:\n%s", str);
+}
+
+void	test_strndup(void)
+{
+	helper();
 }
