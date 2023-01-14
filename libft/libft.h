@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:21:00 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 00:41:29 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/15 01:36:50 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c); 
 
 int		ft_atoi(const char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t size);
 #endif
