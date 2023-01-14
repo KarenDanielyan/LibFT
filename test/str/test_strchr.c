@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   test_strchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 00:00:01 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/14 23:59:23 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/14 23:51:34 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/15 00:01:18 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
+#include "test.h"
 
-# include <stdio.h>
-# include <time.h>
-# include "libft.h"
+static void helper(const char *str, int c)
+{
+	char	*ft_ptr;
+	char	*glib_ptr;
 
-/* GLibC functions */
-void	test_strlen(void);
-void	test_strchr(void);
-void	test_strlcpy(void);
-void	test_strlcat(void);
-void	test_atoi(void);
+	ft_ptr = ft_strchr(str, c);
+	glib_ptr = strchr(str, c);
+	if (strcmp(ft_ptr, glib_ptr) == 0)
+	{
+		printf("\033[1;32m");
+		printf("[OK] ");
+	}
+	else
+	{
+		printf("\033[1;31m");
+		printf("[KO] ");		
+	}
+}
 
-#endif
+void test_strchr(void)
+{
+	printf("ft_strchr: ");
+	helper("Hello World!", 'l');
+	printf("\033[0m\n");
+}

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 00:39:43 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/14 22:34:51 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/14 23:35:43 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/15 00:04:45 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,26 @@
 /*
 *	Reference: <string.h>
 *
-*	Description: ft_strlen calculates the length
-*	of the string pointed by str,
-*	excluding the nul-terminating character '\0'.
+*	Description: ft_strchr returns a pointer
+*	to the first occurrence of the character c 
+*	in the string s.
 *
-*	Return Value: Number of bytes pointed by str.
+*	Return Value: Pointer to the matched
+*	character or NULL if not found.
 */
-size_t	ft_strlen(const char *str)
+char	*ft_strchr(const char *str, int c)
 {
-	int	len;
+	char	*buf;
 
-	len = 0;
-	while (*(str + len))
-		len ++;
-	return (len);
+	buf = (char *)str;
+	while (*buf)
+	{
+		if (*buf == c)
+			return (buf);
+		buf++;
+	}
+	if (*buf == c)
+		return (buf);
+	else
+		return (NULL);
 }
