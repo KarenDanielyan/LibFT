@@ -1,5 +1,5 @@
 #!/bin/bash
-# Build script for testbed
+# Build script for test
 set echo on
 
 mkdir -p ../bin
@@ -9,10 +9,10 @@ cFilenames=$(find . -type f -name "*.c")
 
 # echo "Files:" $cFilenames
 
-assembly="testbed"
+assembly="test"
 compilerFlags="-g -fPIC -Wall -Wextra -Werror -Wpedantic" 
 # -Wall -Werror
-includeFlags="-I./ -I../libft/src/ -I../libft/"
+includeFlags="-I./ -I../libft/"
 linkerFlags="-L../bin/ -l_libft -lbsd -Wl,-rpath,."
 
 echo "Building $assembly..."

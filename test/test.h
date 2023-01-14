@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   test.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/13 22:21:00 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/14 19:20:51 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/14 00:00:01 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/14 19:27:33 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef TEST_H
+# define TEST_H
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stddef.h>
-# include <bsd/string.h> /* NOTE: On Mac "bsd/" is not neccesary. */
+# include <stdio.h>
+# include "libft.h"
 
-/* Glibc Functions */
-size_t	ft_strlen(const char *str);
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-
-int		ft_atoi(const char *str);
-
+/* GLibC functions */
+void	test_strlen(void);
+void	test_strlcpy(void);
+void	test_atoi(void);
 
 #endif
