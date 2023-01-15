@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 00:00:01 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 19:04:35 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/15 22:25:54 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdio.h>
 # include <time.h>
 # include <ctype.h>
-# include "libft.h"
+# include <libft.h>
 
 /* GLibC functions */
 void	test_strlen(void);
@@ -32,6 +32,8 @@ void	test_isprint(void);
 void	test_isascii(void);
 void	test_tolower(void);
 void	test_toupper(void);
+void	test_memset(void);
+void	test_memcmp(void);
 void	test_atoi(void);
 
 #endif

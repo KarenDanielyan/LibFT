@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 22:35:11 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/15 21:21:01 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/15 22:37:39 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "libft.h"
 
-int main(void)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	printf("########   glibc    Functions ########\n");
-	test_strchr();
-	test_strchr();
-	test_strlen();
-	test_strlcpy();
-	test_strlcat();
-	test_strncmp();
-	test_strnstr();
-	test_atoi();
-	test_isalpha();
-	test_isdigit();
-	test_isalnum();
-	test_isprint();
-	test_isascii();
-	test_tolower();
-	test_toupper();
-	test_memset();
-	test_memcmp();
-	printf("######## Additional Functions ########\n");
+	size_t			i;
+	unsigned char	*c1;
+	unsigned char	*c2;
+
+	i = 0;
+	c1 = (unsigned char *)s1;
+	c2 = (unsigned char *)s2;
+	while (i < n)
+	{
+		if (*(c1 + i) != *(c2 + i))
+			return (*(c1 + i) - *(c2 + i));
+		i++;
+	}
 	return (0);
 }

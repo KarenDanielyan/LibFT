@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 19:26:40 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/14 23:23:29 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/15 22:23:47 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void initialize(char *str, size_t size)
 	}
 }
 
-static char *string_gen(size_t size)
+static const char *string_gen(size_t size)
 {
 	char		*str;
 	size_t		i;
@@ -43,26 +43,25 @@ static char *string_gen(size_t size)
 	return (str);
 }
 
+/* TODO: Leaky code: refactor using integers and moving free calls into test_strlcpy function*/
 static const char *helper(const char *str, size_t size)
 {
 	short	cond;
-	char	*ftstr;
-	char	*bsdstr;
+	char	ftstr[100];
+	char	bsdstr[100];
 	size_t	ft_ret;
 	size_t	bsd_ret;
 
 	cond = 0;
-	ftstr = malloc(100);
-	bsdstr = malloc(100);
 	initialize(ftstr, 100);
 	initialize(bsdstr, 100);
 	ft_ret = ft_strlcpy(ftstr, str, size);
 	bsd_ret = strlcpy(bsdstr, str, size);
-	cond = (short)((strcmp(ftstr, bsdstr) == 0) && (ft_ret == bsd_ret));
-	free(bsdstr);
-	free(ftstr);
+	cond = (short)((strncmp(ftstr, bsdstr, size) == 0) && (ft_ret == bsd_ret));
 	if (cond)
+	{
 		return (NULL);
+	}
 	else
 		return (str);
 }
