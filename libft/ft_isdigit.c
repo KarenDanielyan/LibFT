@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 18:03:58 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/15 17:11:46 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/15 17:39:53 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "libft.h"
 
-int main(void)
+/*
+*	Reference: <ctype.h>
+*
+*	Description: Checks for a digit (0 - 9).
+*
+*	Return Value: Nonzero if the character falls
+*	into the tested class, and zero if not.
+*/
+int	ft_isdigit(int c)
 {
-	printf("########   glibc    Functions ########\n");
-	test_strchr();
-	test_strchr();
-	test_strlen();
-	test_strlcpy();
-	test_strlcat();
-	test_strncmp();
-	test_strnstr();
-	test_atoi();
-	test_isalpha();
-	test_isdigit();
-	test_isalnum();
-	test_isprint();
-	test_isascii();
-	printf("######## Additional Functions ########\n");
+	if (c >= '0' && c <= '9')
+		return (0x400);
 	return (0);
 }

@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 18:03:58 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/15 17:31:32 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/15 18:02:59 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "libft.h"
 
-int main(void)
+/*
+*	Reference: <ctype.h>
+*
+*	Description: Checks whether c is a 7-bit
+*	unsigned character (0 - 127).
+*
+*	Return Value: Nonzero if the character falls
+*	into the tested class, and zero if not.
+*/
+int	ft_isascii(int c)
 {
-	printf("########   glibc    Functions ########\n");
-	test_strchr();
-	test_strchr();
-	test_strlen();
-	test_strlcpy();
-	test_strlcat();
-	test_strncmp();
-	test_strnstr();
-	test_atoi();
-	test_isalpha();
-	test_isdigit();
-	test_isalnum();
-	test_isprint();
-	test_isascii();
-	printf("######## Additional Functions ########\n");
+	if (c >= 0 && c <= 127)
+		return (0x400);
 	return (0);
 }
