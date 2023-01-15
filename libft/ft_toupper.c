@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 19:04:55 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/15 18:30:53 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/15 19:07:12 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "libft.h"
 
-int main(void)
+/*
+*	Reference: <ctype.h>
+*
+*	Description: ft_toupper converts leters to upppercase
+*	equivalent, if that representation exists in current
+*	locale.
+*
+*	Return Value: Uppercase equivalent or c if DNE.
+*/
+int	ft_toupper(int c)
 {
-	printf("########   glibc    Functions ########\n");
-	test_strchr();
-	test_strchr();
-	test_strlen();
-	test_strlcpy();
-	test_strlcat();
-	test_strncmp();
-	test_strnstr();
-	test_atoi();
-	test_isalpha();
-	test_isdigit();
-	test_isalnum();
-	test_isprint();
-	test_isascii();
-	test_tolower();
-	test_toupper();
-	printf("######## Additional Functions ########\n");
-	return (0);
+	if (!ft_isalpha(c))
+		return (c);
+	else if (c >= 'A' && c <= 'Z')
+		return (c);
+	else
+		return (c - 32);
 }
