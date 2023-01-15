@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/15 21:21:01 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 23:11:21 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/15 23:13:38 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/16 01:32:45 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,28 @@
 /*
 *	Reference: <string.h>
 *
-*	Description: ft_memcmp compares the first n bytes
-*	of the memory areas s1 and s2.
+*	Description: ft_memmove copies n bytes from memory area
+*	src to dest.
+*	The memory areas may overlap.
 *
-*	Return value: Returns an integer:
-					1. > 0 if s1 > s2,
-					2. < 0 if s1 < s2,
-					3. == 0 if s1 == s2.
+*	Return Value: Pointer to dest.
 */
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*c1;
-	unsigned char	*c2;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	i = 0;
-	c1 = (unsigned char *)s1;
-	c2 = (unsigned char *)s2;
-	while (i < n)
+	d = (unsigned char *)dst;
+	s = (const unsigned char *)src;
+	if (d < s)
+		while (n--)
+			*d++ = *s++;
+	else
 	{
-		if (*(c1 + i) != *(c2 + i))
-			return (*(c1 + i) - *(c2 + i));
-		i++;
+		d += n;
+		s += n;
+		while (n--)
+			*--d = *--s;
 	}
-	return (0);
+	return (dst);
 }

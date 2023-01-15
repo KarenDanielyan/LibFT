@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 00:00:01 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 22:25:54 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/16 01:30:45 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@
 # include <ctype.h>
 # include <libft.h>
 
-/* GLibC functions */
+/* GLibC functions */ // TODO: Tests for memmove, memcpy, memchr, calloc
 void	test_strlen(void);
 void	test_strchr(void);
+void	test_strdup(void);
 void	test_strncmp(void);
 void	test_strnstr(void);
 void	test_strlcpy(void);

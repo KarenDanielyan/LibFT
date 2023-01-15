@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 00:02:51 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/14 00:10:41 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/16 01:32:07 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void    helper(char *str)
 
 void test_atoi(void)
 {
-		printf("ft_atoi(): ");
+		printf("ft_atoi: ");
         helper("  \r  +-+-+-+-2147483647");
         helper("  ++++++---++++++2147483647");
         helper("           -2147483648");

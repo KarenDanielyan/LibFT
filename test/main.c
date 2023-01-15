@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 22:35:11 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/16 01:31:34 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ int main(void)
 {
 	printf("########   glibc    Functions ########\n");
 	test_strchr();
-	test_strchr();
 	test_strlen();
 	test_strlcpy();
 	test_strlcat();
 	test_strncmp();
 	test_strnstr();
+	test_strdup();
 	test_atoi();
 	test_isalpha();
 	test_isdigit();
