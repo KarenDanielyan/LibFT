@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 16:36:16 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/15 13:32:50 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/15 16:30:58 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "libft.h"
 
-int main(void)
+/*
+*	Reference: <ctype.h>
+*
+*	Description: Checks for an alphabetic cheracter.
+*
+*	Return Value: Nonzero if the character falls
+*	into the tested class, and zero if not.
+*/
+int	ft_isalpha(int c)
 {
-	printf("########   glibc    Functions ########\n");
-	test_strchr();
-	test_strchr();
-	test_strlen();
-	test_strlcpy();
-	test_strlcat();
-	test_strncmp();
-	test_strnstr();
-	test_atoi();
-	test_isalpha();
-	printf("######## Additional Functions ########\n");
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (0x400);
 	return (0);
 }

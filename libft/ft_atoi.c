@@ -6,21 +6,12 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:51:45 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/14 00:19:54 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/15 13:36:53 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #define OFFSET '0'
-
-/*
-*	Reference: <stdlib.h>
-*
-*	Description: ft_atoi() converts the inital portion of the string
-*	pointed by *str to int.
-*
-*	Return Value: The converted value or 0 on error.
-*/
 
 static short	is_num(const char *chr)
 {
@@ -38,6 +29,14 @@ static short	is_whitespace(const char *chr)
 		return (0);
 }
 
+/*
+*	Reference: <stdlib.h>
+*
+*	Description: ft_atoi() converts the inital portion of the string
+*	pointed by *str to int.
+*
+*	Return Value: The converted value or 0 on error.
+*/
 int	ft_atoi(const char *str)
 {
 	int			num;
