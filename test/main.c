@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 01:31:34 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/16 02:34:00 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int main(void)
 	test_memset();
 	test_memcmp();
 	printf("######## Additional Functions ########\n");
+	test_split();
 	return (0);
 }

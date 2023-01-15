@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 00:00:01 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 02:03:45 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/16 02:33:20 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ void	test_memset(void);
 void	test_memcmp(void);
 void	test_atoi(void);
 /* Additional Functions */ // TODO: 
-
+void	test_split(void);
 #endif
