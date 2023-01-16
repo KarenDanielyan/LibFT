@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:21:00 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 17:53:02 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/16 22:33:58 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
-# include <bsd/string.h> /* NOTE: On Mac "bsd/" is not neccesary. */
+# include <string.h> /* NOTE: On Mac "bsd/" is not neccesary. */
 
 /* Glibc Functions */
 void	*ft_calloc(size_t nmemb, size_t size);
@@ -30,9 +30,11 @@ size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
+char	*ft_itoa(int n);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
+char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 int		ft_isalpha(int c);
