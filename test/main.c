@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 02:34:00 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:11:20 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main(void)
 {
+	printf("Hello World\n");
 	printf("########   glibc    Functions ########\n");
 	test_strchr();
 	test_strlen();

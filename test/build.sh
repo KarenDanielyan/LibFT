@@ -13,7 +13,7 @@ assembly="test"
 compilerFlags="-g -fPIC -Wall -Wextra -Werror -Wpedantic" 
 # -Wall -Werror
 includeFlags="-I./ -I../libft/"
-linkerFlags="-L../bin/ -l_libft -lbsd -Wl,-rpath,."
+linkerFlags="-L../bin/ -l_libft -Wl,-rpath,."
 
 echo "Building $assembly..."
 echo gcc $cFilenames $compilerFlags -o ../bin/$assembly $includeFlags $linkerFlags

@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:21:00 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 02:05:00 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/16 15:18:14 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
-# include <bsd/string.h> /* NOTE: On Mac "bsd/" is not neccesary. */
+# include <string.h> /* NOTE: On Mac "bsd/" is not neccesary. */
 
 /* Glibc Functions */
 void	*ft_calloc(size_t nmemb, size_t size);

@@ -1,8 +1,20 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "configurations": [
     {
-      "name": "(Linux) Launch",
+      "name": "(lldb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/test",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
+    },
+    {
+      "name": "Launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/bin/test",
@@ -12,16 +24,16 @@
       "environment": []
     },
     {
-      "name": "C/C++ Runner: Debug Session",
+      "name": "(lldb) Launch",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/silence/LibFT",
-      "program": "/home/silence/LibFT/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "cwd": "${workspaceFolder}/bin",
+      "program": "${workspaceFolder}/bin/test",
+      "MIMode": "lldb",
+      "miDebuggerPath": "/usr/bin/lldb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
