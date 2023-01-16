@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 22:22:37 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 23:22:45 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/17 00:22:50 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,28 @@ static void	fill_out(char *a, unsigned int digits, unsigned int size, unsigned c
 	*i = '\0';
 
 }
+
+/*t_string	ft_strrev(t_string str)
+{
+	t_string dup = ft_strdup(str);
+	char	temp;
+	char	*l;
+	char	*r;
+	
+	l = dup;
+	r = dup + ft_strlen(dup) - 1;
+	while (l < r)
+	{
+		temp = *l;
+		*l = *r;
+		*r = temp;
+		l++ ;
+		r-- ;
+	}
+	return (dup);
+}*/
+
+
 /*
 *	Reference: DNE
 *
