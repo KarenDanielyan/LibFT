@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 00:00:01 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 01:22:27 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 03:03:31 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,5 @@ void	test_atoi(void);
 void	test_split(void);
 void	test_itoa(void);
 void	test_strtrim(void);
+void	test_substr(void);
 #endif

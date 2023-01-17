@@ -6,12 +6,21 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 01:44:20 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 01:53:00 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 02:34:14 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+*	Reference: DNE
+*
+*	Description: ft_substr() allocates (with malloc()) and returns a substring
+*	from the string ’s’.
+*	The substring begins at index ’start’ and is of maximum size ’len’.
+*
+*	Return Value: The substring. NULL if the allocation fails.
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*str;
