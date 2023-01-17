@@ -6,13 +6,14 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 00:00:01 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 23:09:34 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:25:15 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TEST_H
 # define TEST_H
 
+# include <limits.h>
 # include <stdio.h>
 # include <time.h>
 # include <ctype.h>
