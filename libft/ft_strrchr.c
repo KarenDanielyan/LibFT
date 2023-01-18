@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 00:37:11 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 00:57:40 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 19:32:15 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 	curr = (char *)(s + i);
 	while (i-- >= 0)
 	{
-		if (*curr == c)
+		if (*curr == (unsigned int)(c & 0xFF))
 			return (curr);
 		curr--;
 	}
