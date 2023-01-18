@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 00:00:01 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 03:03:31 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:15:11 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,11 @@ void	test_toupper(void);
 void	test_memset(void);
 void	test_memcmp(void);
 void	test_atoi(void);
-/* Additional Functions */ // TODO: 
+/* Additional Functions */ // TODO: Tests for strmapi and striter
 void	test_split(void);
 void	test_itoa(void);
 void	test_strtrim(void);
 void	test_substr(void);
+/* Linked Lists */ // TODO: Tests for lstadd_back/front, clear, delone, iter, last, new and size.
+void	test_lstmap(void);
 #endif

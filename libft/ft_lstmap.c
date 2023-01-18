@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:47:39 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 14:58:27 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:18:06 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&map, del);
 			return (NULL);
 		}
-		ft_lstadd_front(&map, tmp);
+		ft_lstadd_back(&map, tmp);
 		lst = lst->next;
 	}
 	return (map);
