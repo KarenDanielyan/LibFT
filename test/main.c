@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:36:07 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/17 22:54:47 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 11:57:40 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ int main(void)
 	test_split();
 	test_itoa();
 	test_strtrim();
+	test_substr();
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 02:48:19 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 11:42:42 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 11:58:52 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ static void	helper(char const *s, unsigned int start, size_t len, char const *st
 
 void	test_substr()
 {
+	printf("ft_substr: ");
 	helper("Hello World", 3, 5, "lo Wo");
     helper("Hello World", 0, 5, "Hello");
     helper("Hello World", 7, 10, "orld");
     helper("Hello World", 0, strlen("Hello World"), "Hello World");
     helper("Hello World", 5, 0, "");
+	printf("\033[0m\n");
 }
