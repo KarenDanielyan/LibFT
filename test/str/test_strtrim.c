@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:46:35 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/17 22:56:08 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 12:29:10 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static void helper(const char *str, const char *set, const char *res)
 {
-	if (strcmp(ft_strtrim(str, set), res) == 0)
+	char *trim = ft_strtrim(str,set);
+	if (strcmp(trim, res) == 0)
 	{
 		printf("\033[1;32m");
 		printf("[OK] ");
@@ -24,6 +25,7 @@ static void helper(const char *str, const char *set, const char *res)
 		printf("\033[1;31m");
 		printf("[KO] ");
 	}
+	free(trim);
 }
 
 void	test_strtrim(void)
