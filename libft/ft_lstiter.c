@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:35:21 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 14:57:52 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:40:28 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,9 @@
 */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst)
+	while (lst != NULL)
 	{
-		while (lst != NULL)
-		{
-			f(lst->content);
-			lst = lst->next;
-		}
+		f(lst->content);
+		lst = lst->next;
 	}
 }

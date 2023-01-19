@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:01:31 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 13:05:35 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:42:55 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@
 */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = *lst;
-	*lst = new;
+	if (*lst && new)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }
