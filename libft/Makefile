@@ -1,20 +1,22 @@
 NAME		=	libft.a
 
-SRCS		=	$(wildcard *.c)
+DEP			= 	$(wildcard *.h) Makefile
+
+SOURCES		=	$(wildcard *.c)
 
 BONUS		=	$(wildcard ft_lst*.c)
 
-FILTER		=	$(filter-out $(BONUS), $(SRCS))
+FILTER		=	$(filter-out $(BONUS), $(SOURCES))
 				
-OBJS		=	$(patsubst %.c, %.o, $(FILTER))
+OBJS		=	$(FILTER:.c=.o)
 
-OBJS_B		=	$(patsubst %.c, %.o, $(BONUS))
+OBJS_B		=	$(BONUS:.c=.o)
 
 CC			=	cc
 
 RM			=	rm -f
 
-CFLAGS		=	-Wall -Werror -Wextra
+CFLAGS		=	-Wall -Wextra -Werror
 
 AR			=	ar rcs
 
@@ -23,7 +25,7 @@ AR			=	ar rcs
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) $(DEP)
 				$(AR) $(NAME) $(OBJS)
 
 bonus:		$(OBJS_B)

@@ -10,7 +10,7 @@ cFilenames=$(find . -type f -name "*.c")
 # echo "Files:" $cFilenames
 
 assembly="libft"
-compilerFlags="-g -shared -fPIC -Wall -Wextra -Werror -Wpedantic"
+compilerFlags="-g -shared -fPIC -ggdb -fsanitize=address -Wall -Wextra -Werror -Wpedantic"
 # -fms-extensions 
 # -Wall -Werror
 includeFlags="-I./"

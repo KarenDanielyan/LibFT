@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 00:43:20 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 19:25:55 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/19 14:52:33 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
+	size_t	siz;
 
-	if (nmemb * size > __INT_MAX__ || (nmemb * size - 2) > __INT_MAX__)
+	siz = size * nmemb;
+	ptr = malloc (size * nmemb);
+	if (!ptr || nmemb == SIZE_MAX || size == SIZE_MAX)
 		return (NULL);
-	ptr = malloc (nmemb * size);
-	ft_memset(ptr, 0, nmemb * size);
+	bzero(ptr, size * nmemb);
 	return (ptr);
 }

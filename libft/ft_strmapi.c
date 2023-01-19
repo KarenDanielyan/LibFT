@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 03:03:59 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 03:38:30 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 21:21:31 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	len = ft_strlen(s);
 	map = (char *)malloc(len + 1);
+	if (!map)
+		return (NULL);
 	while (i < len)
 	{
 		*(map + i) = (*f)(i, *(s + i));

@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 23:03:32 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 23:13:18 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 21:33:26 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	*ft_memcpy(const void *dest, const void *src, size_t n)
 	unsigned char	*sc;
 
 	i = 0;
+	if ((!dest) && (!src))
+		return (NULL);
 	dst = (unsigned char *)dest;
 	sc = (unsigned char *)src;
 	while (i < n)
