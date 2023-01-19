@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 01:44:20 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 21:32:08 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/20 00:27:53 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t		range;
 	size_t		i;
 
-	i = 0;
 	if (!s)
 		return (NULL);
 	i = ft_strlen(s);
 	range = 0;
 	if (start < i)
 		range = i - start;
+	else
+		return (ft_strdup(""));
 	if (range > len)
 		range = len;
 	str = (char *)malloc((range + 1) * sizeof(char));
