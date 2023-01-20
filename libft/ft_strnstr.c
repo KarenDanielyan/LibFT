@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 12:16:55 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 20:56:47 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/20 19:42:43 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	little_len;
 	char	*bg;
 
+	if ((!big ^ !little) && !len)
+		return (NULL);
 	bg = (char *)big;
 	little_len = ft_strlen(little);
 	if (little_len == 0)
