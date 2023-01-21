@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 18:09:15 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 18:09:49 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/21 16:21:48 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
-	while (*str)
-		write(fd, str++, 1);
+	if (str && fd >= 0)
+	{
+		while (*str)
+			write(fd, str++, 1);
+	}
 }
