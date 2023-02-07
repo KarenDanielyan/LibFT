@@ -1,12 +1,12 @@
 NAME		=	libft.a
 
-DEP			= 	$(wildcard *.h) Makefile
+DEP			= 	libft.h Makefile
 
-SOURCES		=	$(wildcard *.c)
+SOURCES		=	$(shell find . -maxdepth 1 -name '*.c' ! -name 'ft_lst*.c')
 
 CC 			= 	cc
 
-BONUS		=	$(wildcard ft_lst*.c)
+BONUS		=	$(shell find . -maxdepth 1 -name 'ft_lst*.c')
 
 FILTER		=	$(filter-out $(BONUS), $(SOURCES))
 				
