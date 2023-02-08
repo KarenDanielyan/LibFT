@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 01:51:09 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 18:40:57 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/21 16:25:59 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**strings;
 
+	if (!s)
+		return (NULL);
 	strings = malloc((count_splits(s, c) + 1) * sizeof(char *));
 	if (!strings)
 		return (NULL);

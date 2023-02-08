@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:26:31 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/18 14:31:26 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/21 16:25:24 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*a;
 
-	while (*lst)
+	if (lst && del)
 	{
-		a = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = a;
+		while (*lst)
+		{
+			a = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = a;
+		}
 	}
 }
