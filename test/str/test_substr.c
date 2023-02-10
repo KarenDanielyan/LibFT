@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_strdup.c                                      :+:      :+:    :+:   */
+/*   test_substr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 01:26:32 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 15:17:30 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/18 02:48:19 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/18 11:58:52 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-static void	helper(void)
+static void	helper(char const *s, unsigned int start, size_t len, char const *std)
 {
-	char	*std_str;
-	char	*ft_str;
-
-	std_str = strdup("If you see this text, then ft_strdup function works!\n");
-	ft_str = ft_strdup("If you see this text, then ft_strdup function works!\n");
-	if (strcmp(std_str, ft_str) == 0)
+	if (strcmp(ft_substr(s, start, len), std) == 0)
 	{
 		printf("\033[1;32m");
 		printf("[OK] ");
@@ -27,15 +22,17 @@ static void	helper(void)
 	else
 	{
 		printf("\033[1;31m");
-		printf("[KO] ");		
+		printf("[KO] ");
 	}
-	free(std_str);
-	free(ft_str);
 }
 
-void	test_strdup(void)
+void	test_substr()
 {
-	printf("ft_strdup: ");
-	helper();
+	printf("ft_substr: ");
+	helper("Hello World", 3, 5, "lo Wo");
+    helper("Hello World", 0, 5, "Hello");
+    helper("Hello World", 7, 10, "orld");
+    helper("Hello World", 0, strlen("Hello World"), "Hello World");
+    helper("Hello World", 5, 0, "");
 	printf("\033[0m\n");
 }

@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_strdup.c                                      :+:      :+:    :+:   */
+/*   test_strtrim.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 01:26:32 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 15:17:30 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/17 22:46:35 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/18 12:29:10 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-static void	helper(void)
+static void helper(const char *str, const char *set, const char *res)
 {
-	char	*std_str;
-	char	*ft_str;
-
-	std_str = strdup("If you see this text, then ft_strdup function works!\n");
-	ft_str = ft_strdup("If you see this text, then ft_strdup function works!\n");
-	if (strcmp(std_str, ft_str) == 0)
+	char *trim = ft_strtrim(str,set);
+	if (strcmp(trim, res) == 0)
 	{
 		printf("\033[1;32m");
 		printf("[OK] ");
@@ -27,15 +23,25 @@ static void	helper(void)
 	else
 	{
 		printf("\033[1;31m");
-		printf("[KO] ");		
+		printf("[KO] ");
 	}
-	free(std_str);
-	free(ft_str);
+	free(trim);
 }
 
-void	test_strdup(void)
+void	test_strtrim(void)
 {
-	printf("ft_strdup: ");
-	helper();
+	char	*set = "\t \n\r";
+	printf("ft_strtrim: ");
+	helper("\t\n Hello World!\t \r \n", set, "Hello World!");
+	if (ft_strtrim("                ", set))
+		{
+		printf("\033[1;32m");
+		printf("[OK] ");
+	}
+	else
+	{
+		printf("\033[1;31m");
+		printf("[KO] ");
+	}
 	printf("\033[0m\n");
 }

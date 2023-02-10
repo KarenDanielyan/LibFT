@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 23:18:30 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/14 23:30:21 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:12:48 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ static void	helper(char *s1, char *s2, unsigned int n)
 void	test_strlcat(void)
 {
 	printf("ft_strlcat: ");
-	helper("dest", "", 19999);
-	helper("", "source", 10000);
+	helper("dest", "", 4);
+	helper("", "source", 5);
 	helper("dst", "src", 0);
 	helper("dst", "src", 1);
 	helper("dst", "src", 2);

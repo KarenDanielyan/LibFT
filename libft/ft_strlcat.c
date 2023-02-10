@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:46:26 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/14 23:08:47 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/21 16:14:55 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	dest_len;
 
+	if ((!dst ^ !src) && !size)
+		return (0);
 	dest_len = ft_strlen(dst);
 	if (size <= dest_len)
 		return (size + ft_strlen(src));

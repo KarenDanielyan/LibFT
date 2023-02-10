@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 18:11:06 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/02/10 18:28:13 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/18 13:29:24 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/18 13:33:08 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+/*
+*	Reference: DNE
+*
+*	Description: Counts the number of nodes in a list.
+*
+*	Return Value: The length of the list.
+*/
+int	ft_lstsize(t_list *lst)
 {
-	write(fd, &c, 1);
+	int	size;
+
+	size = 0;
+	while (lst)
+	{
+		size++;
+		lst = lst->next;
+	}
+	return (size);
 }

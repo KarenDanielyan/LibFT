@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/15 12:16:55 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/20 19:42:43 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/18 12:34:03 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/19 16:39:32 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+/*
+*	Reference: DNE
+*
+*	Description: ft_lstnew allocates (with malloc()) and returns a new node.
+*	The member variable ’content’ is initialized with
+*	the value of the parameter ’content’.  The variable
+*	’next’ is initialized to NULL.
+*
+*	Return Value: The new node.
+*/
+t_list	*ft_lstnew(void *content)
 {
-	size_t	little_len;
-	char	*bg;
+	t_list	*new;
 
-	if ((!big ^ !little) && !len)
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
 		return (NULL);
-	bg = (char *)big;
-	little_len = ft_strlen(little);
-	if (little_len == 0)
-		return ((char *)bg);
-	while (*bg && len)
-	{
-		if ((*bg == *little) && (ft_strncmp(bg, little, little_len) == 0)
-			&& (len >= little_len))
-			return (bg);
-		bg++;
-		len--;
-	}
-	return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

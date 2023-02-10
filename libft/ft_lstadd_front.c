@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 18:11:06 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/02/10 18:28:13 by kdaniely         ###   ########.fr       */
+/*   Created: 2023/01/18 13:01:31 by kdaniely          #+#    #+#             */
+/*   Updated: 2023/01/21 16:18:47 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+/*
+*	Reference: DNE
+*
+*	Description: Adds the node ’new’ at the beginning of the list.
+*
+*	Return value: None
+*/
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	write(fd, &c, 1);
+	if (lst)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }

@@ -6,17 +6,17 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 01:51:09 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/16 01:59:58 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/21 16:25:59 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	_is_delim(char c, char delimiter)
+void	free_split(char **split, int index)
 {
-	if (c == delimiter)
-		return (1);
-	return (0);
+	while (index--)
+		free(*(split + index));
+	free(split);
 }
 
 int	ft_strlen_delim(const char *str, char delimiter)
@@ -24,7 +24,7 @@ int	ft_strlen_delim(const char *str, char delimiter)
 	int	i;
 
 	i = 0;
-	while (*(str + i) && !_is_delim(*(str + i), delimiter))
+	while (*(str + i) && (*(str + i) != delimiter))
 	{
 		i++;
 	}
@@ -40,53 +40,55 @@ int	count_splits(const char *str, char delimiter)
 	i = 0;
 	while (*(str + i))
 	{
-		while (*(str + i) && _is_delim(*(str + i), delimiter))
+		while (*(str + i) && (*(str + i) == delimiter))
 			i++;
 		if (*(str + i))
 			count++;
-		while (*(str + i) && !_is_delim(*(str + i), delimiter))
+		while (*(str + i) && (*(str + i) != delimiter))
 			i++;
 	}
 	return (count);
 }
 
-char	*get_word(const char *str, char delimiter)
+char	**get_strings(char **strings, char const *s, char c)
 {
-	int		word_len;
-	int		i;
-	char	*word;
+	int	i;
+	int	j;
 
 	i = 0;
-	word_len = ft_strlen_delim(str, delimiter);
-	word = (char *)malloc((word_len + 1) * sizeof(char));
-	while (i < word_len)
+	j = 0;
+	while (*(s + j))
 	{
-		*(word + i) = *(str + i);
-		i++;
+		while (*(s + j) && (*(s + j) == c))
+			j++;
+		if (*(s + j))
+		{
+			*(strings + i) = ft_substr(s, j, ft_strlen_delim((s + j), c));
+			if (!*(strings + i))
+			{
+				free_split(strings, i);
+				return (NULL);
+			}
+			i++;
+		}
+		while (*(s + j) && (*(s + j) != c))
+			j++;
 	}
-	*(word + i) = '\0';
-	return (word);
+	*(strings + i) = 0;
+	return (strings);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**strings;
-	int		i;
 
-	i = 0;
+	if (!s)
+		return (NULL);
 	strings = malloc((count_splits(s, c) + 1) * sizeof(char *));
-	while (*s)
-	{
-		while (*s && _is_delim(*s, c))
-			s++;
-		if (*s)
-		{
-			*(strings + i) = get_word(s, c);
-			i++;
-		}
-		while (*s && !_is_delim(*s, c))
-			s++;
-	}
-	*(strings + i) = 0;
+	if (!strings)
+		return (NULL);
+	strings = get_strings(strings, s, c);
+	if (!strings)
+		return (NULL);
 	return (strings);
 }

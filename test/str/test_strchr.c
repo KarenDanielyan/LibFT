@@ -6,7 +6,7 @@
 /*   By: kdaniely <kdaniely@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 23:51:34 by kdaniely          #+#    #+#             */
-/*   Updated: 2023/01/15 01:18:44 by kdaniely         ###   ########.fr       */
+/*   Updated: 2023/01/18 19:05:45 by kdaniely         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void test_strchr(void)
 	helper("adsldjnaskdjnakljsdnfklasdfklasjdalje", 0, &strchr, &ft_strchr);
 	helper("helo", 'h', &strchr, &ft_strchr);
 	helper("lore ipsum", 'm', &strchr, &ft_strchr);
+	helper("tripouille", ('t' + 256), &strchr, &ft_strchr);
 	printf("\033[0m\n");
 }
 
